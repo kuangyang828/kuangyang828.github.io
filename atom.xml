@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>况杨的博客</title>
-    <updated>2021-01-23T12:55:39.231Z</updated>
+    <updated>2021-01-23T13:00:31.597Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -67,12 +67,13 @@
 </code></pre>
 <h3 id="方式二">方式二</h3>
 <p>缩进 4 个空格或是 1 个制表符；<br>
-'注意此种方式代码块上方要留一空行'<br>
+<code>注意此种方式代码块上方要留一空行</code><br>
 示例：</p>
 <pre><code>for i in range(10, 51):
     if 1 &lt;= i % 10 &lt;= 5:
     print(i)
 </code></pre>
+<p>未完待续......</p>
 ]]></content>
     </entry>
 </feed>
