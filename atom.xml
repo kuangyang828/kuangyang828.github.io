@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>况杨的博客</title>
-    <updated>2021-01-23T12:50:45.265Z</updated>
+    <updated>2021-01-23T12:54:38.771Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -16,8 +16,7 @@
         <link href="https://kuangyang828.github.io/post/markdown-yu-yan/">
         </link>
         <updated>2021-01-09T05:26:27.000Z</updated>
-        <content type="html"><![CDATA[<p>目录：使用[TOC]就可以生成目录<br>
-[TOC]</p>
+        <content type="html"><![CDATA[<p>目录：使用<code>[TOC]</code>就可以生成目录</p>
 <h1 id="标题">标题</h1>
 <p>在Markdown中定义标题在前加<code>#</code>号即可。<br>
 以此类推，总共六级标题。<br>
