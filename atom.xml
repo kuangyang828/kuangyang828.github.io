@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>况杨的博客</title>
-    <updated>2021-01-09T05:50:54.989Z</updated>
+    <updated>2021-01-23T12:50:45.265Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -11,12 +11,69 @@
     <icon>https://kuangyang828.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 况杨的博客</rights>
     <entry>
-        <title type="html"><![CDATA[Markdown语言学习记录]]></title>
-        <id>https://kuangyang828.github.io/post/guan-yu-markdown-wen-fa/</id>
-        <link href="https://kuangyang828.github.io/post/guan-yu-markdown-wen-fa/">
+        <title type="html"><![CDATA[Markdown语言]]></title>
+        <id>https://kuangyang828.github.io/post/markdown-yu-yan/</id>
+        <link href="https://kuangyang828.github.io/post/markdown-yu-yan/">
         </link>
         <updated>2021-01-09T05:26:27.000Z</updated>
-        <content type="html"><![CDATA[<p>关于markdown语言之前一直经常听说</p>
+        <content type="html"><![CDATA[<p>目录：使用[TOC]就可以生成目录<br>
+[TOC]</p>
+<h1 id="标题">标题</h1>
+<p>在Markdown中定义标题在前加<code>#</code>号即可。<br>
+以此类推，总共六级标题。<br>
+在<code>#</code>号后建议加一个<code>空格</code>，这是标准的Markdown语法。<br>
+<code># 标题H1</code><br>
+<code>## 标题H3</code><br>
+<code>#### 标题H4</code><br>
+<code>##### 标题H5</code><br>
+<code>###### 标题H6</code></p>
+<p>示例：</p>
+<h1 id="标题h1">标题H1</h1>
+<h2 id="标题h2">标题H2</h2>
+<h3 id="标题h3">标题H3</h3>
+<h4 id="标题h4">标题H4</h4>
+<h5 id="标题h5">标题H5</h5>
+<h5 id="标题h6">标题H6</h5>
+<h1 id="强调语法">强调语法</h1>
+<h2 id="斜体"><em>斜体</em></h2>
+<p>斜体的语法是用<code>*</code>或<code>_</code>包裹<br>
+<code>*这是斜体*</code><br>
+<code>_这也是斜体_</code></p>
+<p>示例：<br>
+<em>这也是斜体</em><br>
+<em>这是斜体</em></p>
+<h2 id="粗体"><strong>粗体</strong></h2>
+<p>粗体的语法是用<code>**</code>包裹<br>
+<code>**这是粗体**</code></p>
+<p>示例：<br>
+<strong>这是粗体</strong></p>
+<h2 id="删除线">删除线</h2>
+<p>删除线的语法是用<code>~~</code>包裹<br>
+<code>~~这是删除线~~</code></p>
+<p>示例：<br>
+<s>这是删除线</s></p>
+<h1 id="代码code">代码Code</h1>
+<h2 id="单行代码">单行代码</h2>
+<p>行内代码的语法是用<code>反引号（～键）</code>包裹。<br>
+当然单行代码也可用来标记<code>文件名</code>、<code>关键字</code>等。<br>
+示例：<br>
+<code>这是单行代码</code></p>
+<h2 id="多行代码">多行代码</h2>
+<h3 id="方式一">方式一</h3>
+<p>用<code>三个反引号（～键）</code>包裹。<br>
+示例：</p>
+<pre><code>for i in range(10, 51):
+    if 1 &lt;= i % 10 &lt;= 5:
+    print(i)
+</code></pre>
+<h3 id="方式二">方式二</h3>
+<p>缩进 4 个空格或是 1 个制表符；<br>
+'注意此种方式代码块上方要留一空行'<br>
+示例：</p>
+<pre><code>for i in range(10, 51):
+    if 1 &lt;= i % 10 &lt;= 5:
+    print(i)
+</code></pre>
 ]]></content>
     </entry>
 </feed>
