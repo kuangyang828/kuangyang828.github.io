@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>况杨的博客</title>
-    <updated>2021-01-23T13:03:14.913Z</updated>
+    <updated>2021-01-23T13:15:58.983Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -17,7 +17,7 @@
         </link>
         <updated>2021-01-09T05:26:27.000Z</updated>
         <content type="html"><![CDATA[<p>目录：使用<code>[TOC]</code>就可以生成目录<br>
-[TOC]</p>
+注：本博客框架在PC端会自动生成目录导航😁</p>
 <h1 id="标题">标题</h1>
 <p>在Markdown中定义标题在前加<code>#</code>号即可。<br>
 以此类推，总共六级标题。<br>
@@ -26,17 +26,11 @@
 <code>## 标题H3</code><br>
 <code>#### 标题H4</code><br>
 <code>##### 标题H5</code><br>
-<code>###### 标题H6</code><br>
-示例：</p>
-<h1 id="标题h1">标题H1</h1>
-<h2 id="标题h2">标题H2</h2>
-<h3 id="标题h3">标题H3</h3>
-<h4 id="标题h4">标题H4</h4>
-<h5 id="标题h5">标题H5</h5>
-<h5 id="标题h6">标题H6</h5>
+<code>###### 标题H6</code></p>
 <h1 id="强调语法">强调语法</h1>
 <h2 id="斜体"><em>斜体</em></h2>
 <p>斜体的语法是用<code>*</code>或<code>_</code>包裹<br>
+快捷键为<code>Command+I</code><br>
 <code>*这是斜体*</code><br>
 <code>_这也是斜体_</code><br>
 示例：<br>
@@ -44,6 +38,7 @@
 <em>这是斜体</em></p>
 <h2 id="粗体"><strong>粗体</strong></h2>
 <p>粗体的语法是用<code>**</code>包裹<br>
+快捷键为<code>Command+B</code><br>
 <code>**这是粗体**</code><br>
 示例：<br>
 <strong>这是粗体</strong></p>
