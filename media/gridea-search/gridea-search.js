@@ -1,16 +1,21 @@
+/**
+ * https://github.com/tangkaichuan/gridea-search
+ */
+
+
 //获取url参数
 function getParam(url, param) {
     if (url.indexOf('?') > -1) {
         var urlSearch = url.split('?');
         var paramList = urlSearch[1].split('&');
         for (var i = paramList.length - 1; i >= 0; i--) {
-            var tep = paramList[i].split('=');
-            if (tep[0] == param) {
-                return tep[1];
+            var temp = paramList[i].split('=');
+            if (temp[0] === param) {
+                return temp[1];
             }
         }
     }
-};
+}
 
 //原生js Ajax 异步GET请求
 function ajax(obj) {
@@ -19,11 +24,11 @@ function ajax(obj) {
     xhr.send(null);
     xhr.onreadystatechange = function () {
         //异步请求：响应状态为4，数据加载完毕
-        if (xhr.readyState == 4)
+        if (xhr.readyState === 4)
             callback();
     }
     function callback() {
-        if (xhr.status == 200) {
+        if (xhr.status === 200) {
             obj.success(xhr.responseText);
         } else {
             obj.error(xhr.status);
@@ -33,12 +38,13 @@ function ajax(obj) {
 
 //模糊搜索
 function fuzzySearch(data, phrase) {
+    //配置见 https://github.com/krisk/fuse
     var options = {
         shouldSort: true,
         includeMatches: true,
         threshold: 0.5,
         location: 0,
-        distance: 1000,
+        distance: 10000,
         maxPatternLength: 32,
         minMatchCharLength: 1,
         keys: [
@@ -126,7 +132,7 @@ function searchByParam(resultHandler) {
     if (phrase === '' || typeof (phrase) === 'undefined') {
         showNoResult();
     } else {
-        searchBy(decodeURI(phrase), resultHandler);
+        searchBy(decodeURIComponent(phrase), resultHandler);
     }
 }
 
@@ -164,9 +170,9 @@ function keywordsHighlight(searchedContent) {
     for (var i = 0; i < searchedContent.matches.length; i++) {
         if (searchedContent.matches[i].key === 'content') {//如果匹配到文章内容，截取关键字
             var indices = searchedContent.matches[i].indices[0];
-            var beforeKeyword = searchedPostContent.substring(indices[0] - 10, indices[0]);//关键字前20字
+            var beforeKeyword = searchedPostContent.substring(indices[0] - 10, indices[0]);//关键字前10字
             var keyword = searchedPostContent.substring(indices[0], indices[1] + 1);//关键字
-            var afterKeyword = searchedPostContent.substring(indices[1] + 1, indices[1] + 70);//关键字后80字
+            var afterKeyword = searchedPostContent.substring(indices[1] + 1, indices[1] + 70);//关键字后70字
             preview = beforeKeyword + '<span class="searched-keyword">'
                 + keyword + '</span>' + afterKeyword;
         } else {//没有匹配到文章内容，则是标题
