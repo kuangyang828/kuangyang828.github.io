@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-02-03T06:48:37.406Z</updated>
+    <updated>2021-02-03T06:51:02.141Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -46,6 +46,8 @@
 <li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
 <li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
 <li><a href="#to-do%E5%88%97%E8%A1%A8">To-Do列表</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E5%BC%95%E7%94%A8">文本引用</a></li>
+<li><a href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87">插入图片</a></li>
 </ul>
 </p>
 <hr>
@@ -235,17 +237,17 @@
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6169740"><label class="task-list-item-label" for="task-item-6169740"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5988012"><label class="task-list-item-label" for="task-item-5988012"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8428971"><label class="task-list-item-label" for="task-item-8428971"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-9058858"><label class="task-list-item-label" for="task-item-9058858"> 已完成</label></li>
 </ul>
-<p>#文本引用<br>
-文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>
+<h1 id="文本引用">文本引用</h1>
+<p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>
 示例：</p>
 <blockquote>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。</p>
 </blockquote>
-<p>#插入图片<br>
-持续更新中......</p>
+<h1 id="插入图片">插入图片</h1>
+<p>持续更新中......</p>
 ]]></content>
     </entry>
 </feed>
