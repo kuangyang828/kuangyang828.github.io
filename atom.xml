@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-02-05T16:18:19.754Z</updated>
+    <updated>2021-02-05T18:20:20.830Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://kuangyang828.github.io/images/avatar.png</logo>
     <icon>https://kuangyang828.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, kuangyang&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[使用jsDelivr的CDN配合PicGo搭建一个GitHub图床]]></title>
+        <id>https://kuangyang828.github.io/post/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/</id>
+        <link href="https://kuangyang828.github.io/post/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/">
+        </link>
+        <updated>2021-02-05T17:19:13.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>图床千千万，自建一个才放心。</p>
+</blockquote>
+<p>一个图床的核心需求不外乎是安全稳定+长期可靠+访问快速+能白嫖就白嫖。</p>
+<p>那么我选择了使用<code>GitHub</code>作为图床，但是GitHub在国内直连速度不尽人意，所以我搭配使用了<code>jsDelivr</code>的CDN，jsDelivr的CDN加速服务器遍布全球，包括中国。同理也可使用jsDeliver的CDN免费加速GitHub仓库的其他内容，比如本博客😊，但是注意不要拿来捣腾视频图床，否则可能会被jsDeliver拉黑，较详细的jsDeliver介绍与规则放于文末。</p>
+<p>同时使用开源工具<code>PicGo</code>作为图床的综合管理工具。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Markdown语言]]></title>
         <id>https://kuangyang828.github.io/post/markdown-yu-yan/</id>
@@ -237,8 +251,8 @@
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1320107"><label class="task-list-item-label" for="task-item-1320107"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7291784"><label class="task-list-item-label" for="task-item-7291784"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1630113"><label class="task-list-item-label" for="task-item-1630113"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2083319"><label class="task-list-item-label" for="task-item-2083319"> 已完成</label></li>
 </ul>
 <h1 id="文本引用">文本引用</h1>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>

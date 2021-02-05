@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Markdown语言 | kuangyang&#39;s Blog</title>
+<title>使用jsDelivr的CDN配合PicGo搭建一个GitHub图床 | kuangyang&#39;s Blog</title>
 
 <link rel="stylesheet" href="https://kuangyang828.github.io/styles/main.css">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
@@ -45,12 +45,12 @@
 <body class="post-template-default single single-post postid-70 single-format-standard">
 	<div id="wrapper">
 				<header id="header" class="site-header" 
-			style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/markdown-guide-og.jpg)"
+			style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/blog-picture-head.png)"
 			>
 			<div class="site-branding">
 				<h1 class="site-title">
 					<div class="post-title-name">
-						<a href="https://kuangyang828.github.io" rel="home">Markdown语言</a>
+						<a href="https://kuangyang828.github.io" rel="home">使用jsDelivr的CDN配合PicGo搭建一个GitHub图床</a>
 					</div>
 				</h1>
 				<h2 class="site-description">记录我的学习点滴</h2>
@@ -148,13 +148,13 @@
 							<div class="entry-meta">
 								<div class="entry-info">
 									<time>
-										2021-01-09
+										2021-02-06
 									</time>
 									<span>
-										3 min read
+										1 min read
 									</span>
 									<!-- id 将作为查询条件 -->
-									<span id="/markdown-yu-yan/" class="leancloud_visitors"  data-flag-title="Markdown语言">
+									<span id="/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/" class="leancloud_visitors"  data-flag-title="使用jsDelivr的CDN配合PicGo搭建一个GitHub图床">
 										<span class="leancloud-visitors-count"></span>次阅读
 									</span>
 									<span class="isTop">
@@ -170,252 +170,30 @@
 								</div>
 							</div>
 							<div class="wow zoomIn entry-summary song">
-								<p>目录：使用<code>[TOC]</code>就可以生成目录<br>
-<ul class="markdownIt-TOC">
-<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
-<li><a href="#%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95">强调语法</a>
-<ul>
-<li><a href="#%E6%96%9C%E4%BD%93"><em>斜体</em></a></li>
-<li><a href="#%E7%B2%97%E4%BD%93"><strong>粗体</strong></a></li>
-<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BB%A3%E7%A0%81code">代码Code</a>
-<ul>
-<li><a href="#%E5%8D%95%E8%A1%8C%E4%BB%A3%E7%A0%81">单行代码</a></li>
-<li><a href="#%E5%A4%9A%E8%A1%8C%E4%BB%A3%E7%A0%81">多行代码</a>
-<ul>
-<li><a href="#%E6%96%B9%E5%BC%8F%E4%B8%80">方式一</a></li>
-<li><a href="#%E6%96%B9%E5%BC%8F%E4%BA%8C">方式二</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
-<ul>
-<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
-<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
-</ul>
-</li>
-<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
-<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
-<li><a href="#to-do%E5%88%97%E8%A1%A8">To-Do列表</a></li>
-<li><a href="#%E6%96%87%E6%9C%AC%E5%BC%95%E7%94%A8">文本引用</a></li>
-<li><a href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87">插入图片</a></li>
-</ul>
-</p>
-<hr>
-<h1 id="标题">标题</h1>
-<p>在Markdown中定义标题在前加<code>#</code>号即可。<br>
-以此类推，总共六级标题。<br>
-在<code>#</code>号后建议加一个<code>空格</code>，这是标准的Markdown语法。<br>
-<code># 标题H1</code><br>
-<code>## 标题H3</code><br>
-<code>#### 标题H4</code><br>
-<code>##### 标题H5</code><br>
-<code>###### 标题H6</code></p>
-<hr>
-<h1 id="强调语法">强调语法</h1>
-<h2 id="斜体"><em>斜体</em></h2>
-<p>斜体的语法是用<code>*</code>或<code>_</code>包裹<br>
-快捷键为<code>Command+I</code><br>
-<code>*这是斜体*</code><br>
-<code>_这也是斜体_</code><br>
-示例：<br>
-<em>这也是斜体</em><br>
-<em>这是斜体</em></p>
-<h2 id="粗体"><strong>粗体</strong></h2>
-<p>粗体的语法是用<code>**</code>包裹<br>
-快捷键为<code>Command+B</code><br>
-<code>**这是粗体**</code><br>
-示例：<br>
-<strong>这是粗体</strong></p>
-<h2 id="删除线">删除线</h2>
-<p>删除线的语法是用<code>~~</code>包裹<br>
-<code>~~这是删除线~~</code><br>
-示例：<br>
-<s>这是删除线</s></p>
-<hr>
-<h1 id="代码code">代码Code</h1>
-<h2 id="单行代码">单行代码</h2>
-<p>行内代码的语法是用<code>反引号（Esc键）</code>包裹。<br>
-当然单行代码也可用来标记<code>文件名</code>、<code>关键字</code>等。<br>
-示例：<br>
-<code>这是单行代码</code></p>
-<h2 id="多行代码">多行代码</h2>
-<h3 id="方式一">方式一</h3>
-<p>用<code>三个反引号（Esc键）</code>包裹。<br>
-示例：</p>
-<pre><code>for i in range(10, 51):
-    if 1 &lt;= i % 10 &lt;= 5:
-    print(i)
-</code></pre>
-<h3 id="方式二">方式二</h3>
-<p>缩进 4 个空格或是 1 个制表符；<br>
-<code>注意此种方式代码块上方要留一空行</code><br>
-示例：</p>
-<pre><code>for i in range(10, 51):
-    if 1 &lt;= i % 10 &lt;= 5:
-    print(i)
-</code></pre>
-<hr>
-<h1 id="列表">列表</h1>
-<h2 id="无序列表">无序列表</h2>
-<p>无序列表以<code>+``-``*</code>任意开头即可<br>
-类似于标题，注意要<code>+``-``*</code>后面要加一个<code>空格</code><br>
-示例：<br>
-<code>+ 列表一</code><br>
-<code>- 列表二</code><br>
-<code>* 列表三</code><br>
-显示效果：</p>
-<ul>
-<li>列表一</li>
-</ul>
-<ul>
-<li>列表二</li>
-</ul>
-<ul>
-<li>列表三</li>
-</ul>
-<p>并且可任意嵌套。</p>
-<pre><code>+ 一级嵌套
-- 一级嵌套
-* 一级嵌套
-    - 二级嵌套
-    * 二级嵌套
-    + 二级嵌套
-        + 三级嵌套
-        + 三级嵌套
-        + 三级嵌套
-            - 四级嵌套
-            + 四级嵌套
-            * 四级嵌套
-</code></pre>
-<p>示例：</p>
-<ul>
-<li>一级嵌套</li>
-</ul>
-<ul>
-<li>一级嵌套</li>
-</ul>
-<ul>
-<li>一级嵌套
-<ul>
-<li>二级嵌套</li>
-</ul>
-<ul>
-<li>二级嵌套</li>
-</ul>
-<ul>
-<li>二级嵌套
-<ul>
-<li>三级嵌套</li>
-<li>三级嵌套</li>
-<li>三级嵌套</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="有序列表">有序列表</h2>
-<p>有序列表直接以阿拉伯数学排序即可。<br>
-注意在<code>有序列表符号</code>后面建议也加一个<code>空格</code><br>
-示例：</p>
-<ol>
-<li>列表一</li>
-<li>列表二</li>
-<li>列表三</li>
-</ol>
-<hr>
-<h1 id="分割线">分割线</h1>
-<p>连续三个星号<code>***</code>或者连续三个横杠<code>---</code>即可。<br>
-推荐使用连续的三个星号。</p>
-<hr>
-<h1 id="表格">表格</h1>
-<p>在Markdown中制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头和其他行<br>
-语法格式如下：</p>
-<pre><code>| 表头 | 表头 |
-| --- | --- |
-| 单元格 | 单元格 |
-</code></pre>
-<p>示例显示效果为：</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody>
-</table>
-<p>我们也可以设置表格的对齐方式：</p>
-<ul>
-<li>:<code>---</code>设置内容和标题左对齐</li>
-<li><code>:---:</code>设置内容和标题居中对齐</li>
-<li><code>---:</code>设置内容和标题右对齐</li>
-</ul>
-<pre><code>    | 左对齐 | 居中对齐 | 右对齐 |
-    | :--- | :---: | ---: |
-    | 单元格 | 单元格 | 单元格 |
-    | 单元格 | 单元格 | 单元格 |
-</code></pre>
-<p>示例显示效果为：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">左对齐</th>
-<th style="text-align:center">居中对齐</th>
-<th style="text-align:right">右对齐</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:center">单元格</td>
-<td style="text-align:right">单元格</td>
-</tr>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:center">单元格</td>
-<td style="text-align:right">单元格</td>
-</tr>
-</tbody>
-</table>
-<h1 id="to-do列表">To-Do列表</h1>
-<p><code>- [ ] Text</code>表示未完成<br>
-<code>- [x] Text</code>表示已完成<br>
-示例：</p>
-<ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-1630113"><label class="task-list-item-label" for="task-item-1630113"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2083319"><label class="task-list-item-label" for="task-item-2083319"> 已完成</label></li>
-</ul>
-<h1 id="文本引用">文本引用</h1>
-<p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>
-示例：</p>
-<blockquote>
-<p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。</p>
+								<blockquote>
+<p>图床千千万，自建一个才放心。</p>
 </blockquote>
-<h1 id="插入图片">插入图片</h1>
-<p>持续更新中......</p>
+<p>一个图床的核心需求不外乎是安全稳定+长期可靠+访问快速+能白嫖就白嫖。</p>
+<p>那么我选择了使用<code>GitHub</code>作为图床，但是GitHub在国内直连速度不尽人意，所以我搭配使用了<code>jsDelivr</code>的CDN，jsDelivr的CDN加速服务器遍布全球，包括中国。同理也可使用jsDeliver的CDN免费加速GitHub仓库的其他内容，比如本博客😊，但是注意不要拿来捣腾视频图床，否则可能会被jsDeliver拉黑，较详细的jsDeliver介绍与规则放于文末。</p>
+<p>同时使用开源工具<code>PicGo</code>作为图床的综合管理工具。</p>
 
 							</div>
 							<div class="wow zoomIn vt-post-tags">
 								
-								<a href="https://kuangyang828.github.io/tag/XJ4rPE-xC/" rel="tag">Markdown</a>
+								<a href="https://kuangyang828.github.io/tag/L-PnyMsiD/" rel="tag">GitHub</a>
+								
+								<a href="https://kuangyang828.github.io/tag/aP0eAr1qj/" rel="tag">jsDelivr</a>
+								
+								<a href="https://kuangyang828.github.io/tag/ZrYHPRDWX/" rel="tag">图床</a>
 								
 							</div>
 							<nav class="navigation3 post-navigation3" role="navigation">
 
 								<div class="nav-links3">
 									
-									<div class="wow zoomIn nav-previous3"><a href="https://kuangyang828.github.io/post/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/"
-											rel="prev"> 使用jsDelivr的CDN配合PicGo搭建一个GitHub图床</a></div>
 									
+									<div class="wow zoomIn nav-next3"><a href="https://kuangyang828.github.io/post/markdown-yu-yan/"
+											rel="next"> Markdown语言</a></div>
 									
 								</div>
 							</nav>
