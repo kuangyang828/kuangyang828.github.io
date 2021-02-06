@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-02-06T05:00:54.117Z</updated>
+    <updated>2021-02-06T05:40:53.503Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
-    <subtitle>记录我的学习点滴</subtitle>
+    <subtitle>记录我的学习点滴。</subtitle>
     <logo>https://kuangyang828.github.io/images/avatar.png</logo>
     <icon>https://kuangyang828.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, kuangyang&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[对二进制的新理解]]></title>
-        <id>https://kuangyang828.github.io/post/dui-er-jin-zhi-de-xin-li-jie/</id>
-        <link href="https://kuangyang828.github.io/post/dui-er-jin-zhi-de-xin-li-jie/">
+        <id>https://kuangyang828.github.io/dui-er-jin-zhi-de-xin-li-jie/</id>
+        <link href="https://kuangyang828.github.io/dui-er-jin-zhi-de-xin-li-jie/">
         </link>
         <updated>2021-02-06T04:55:41.000Z</updated>
         <content type="html"><![CDATA[<p>二进制</p>
@@ -22,8 +22,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[使用jsDelivr的CDN配合PicGo搭建一个GitHub图床]]></title>
-        <id>https://kuangyang828.github.io/post/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/</id>
-        <link href="https://kuangyang828.github.io/post/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/">
+        <id>https://kuangyang828.github.io/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/</id>
+        <link href="https://kuangyang828.github.io/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/">
         </link>
         <updated>2021-02-05T17:19:13.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -36,8 +36,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Markdown语言]]></title>
-        <id>https://kuangyang828.github.io/post/markdown-yu-yan/</id>
-        <link href="https://kuangyang828.github.io/post/markdown-yu-yan/">
+        <id>https://kuangyang828.github.io/markdown-yu-yan/</id>
+        <link href="https://kuangyang828.github.io/markdown-yu-yan/">
         </link>
         <updated>2021-01-09T05:26:27.000Z</updated>
         <content type="html"><![CDATA[<p>目录：使用<code>[TOC]</code>就可以生成目录<br>
@@ -261,8 +261,8 @@
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6965444"><label class="task-list-item-label" for="task-item-6965444"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4893020"><label class="task-list-item-label" for="task-item-4893020"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8124691"><label class="task-list-item-label" for="task-item-8124691"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3244655"><label class="task-list-item-label" for="task-item-3244655"> 已完成</label></li>
 </ul>
 <h1 id="文本引用">文本引用</h1>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<link rel="apple-touch-icon"
+  href="https://cdn.jsdelivr.net/gh/chiperman/Blog-photos/./img/iocn/aojep-i6dt9.49j3g5o9xbg.png">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+<meta HTTP-EQUIV="expires" CONTENT="0">
+<meta name="apple-mobile-web-app-title" content="XiaoX 博客">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<title>Markdown语言 | kuangyang&#39;s Blog</title>
+
+<link rel="stylesheet" href="https://kuangyang828.github.io/styles/main.css">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
+  rel="stylesheet">
+<link href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css" rel="stylesheet" />
+<!-- 下面是我自己的iconfont -->
+<link href="https://at.alicdn.com/t/font_1651848_9ur7s2zwgll.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<script type='text/javascript' src='https://kuangyang828.github.io/media/scripts/script.js'></script>
+<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+<script>
+  wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: true,
+    live: true
+  });
+  wow.init();
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1JKJE0GQC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-J1JKJE0GQC');
+</script>
+
+</head>
+
+<body class="post-template-default single single-post postid-70 single-format-standard">
+	<div id="wrapper">
+				<header id="header" class="site-header" 
+			style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/markdown-guide-og.jpg)"
+			>
+			<div class="site-branding">
+				<h1 class="site-title">
+					<div class="post-title-name">
+						<a href="https://kuangyang828.github.io" rel="home">Markdown语言</a>
+					</div>
+				</h1>
+				<h2 class="site-description">记录我的学习点滴。</h2>
+			</div>
+			<nav id="nav-wrapper">
+				<div class="container">
+					<div class="nav-toggle">
+						<div class="bars">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<ul id="" class="dove">
+						
+
+						<li>
+
+							<a href="/"> 首页</a></li>
+
+						
+
+						<li>
+
+							<a href="/archives"> 归档</a></li>
+
+						
+
+						<li>
+
+							<a href="/tags"> 标签</a></li>
+
+						
+
+						<li>
+
+							<a href="/post/about"> 关于</a></li>
+
+						
+
+					</ul>
+					</li>
+
+					</ul>
+				</div>
+			</nav>
+
+			<div class="jingge">
+				
+				
+				<a href="https://kuangyang.me/atom.xml" target="_blank"><i class="iconfont icon-rss"></i></a>
+				
+				
+				
+				
+				
+				<a href="https://github.com/kuangyang828" target="_blank"><i class="iconfont icon-github"></i></a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</div>
+			<form id="gridea-search-form" data-update="1612590049118" action="/search/index.html">
+				<div class="search-box">
+					<input class="search-txt" name="q" placeholder="Type to search" />
+					<a class="search-btn">
+						<i class="iconfont icon-search1" action="/search/index.html"></i>
+					</a>
+				</div>
+			</form>
+		</header>
+		<div id="content" class="container">
+			<div class="row">
+				<div class="col-md-8 site-main">
+					<article id="post-70"
+						class="post-70 post type-post status-publish format-standard hentry category-5 tag-10 tag-9 tag-11">
+						<div class="entry-content">
+							<div class="entry-meta">
+								<div class="entry-info">
+									<time>
+										2021-01-09
+									</time>
+									<span>
+										3 min read
+									</span>
+									<!-- id 将作为查询条件 -->
+									<span id="/markdown-yu-yan/" class="leancloud_visitors"  data-flag-title="Markdown语言">
+										<span class="leancloud-visitors-count"></span>次阅读
+									</span>
+									<span class="isTop">
+										<script type="text/javascript">
+											var isTop;
+											isTop = false;
+											if (isTop == true) {
+												// document.write("<i class="iconfont icon-icon-test"></i>")
+												document.write("<span>⭐ Top</span>");
+											}
+										  </script>
+									</span>
+								</div>
+							</div>
+							<div class="wow zoomIn entry-summary song">
+								<p>目录：使用<code>[TOC]</code>就可以生成目录<br>
+<ul class="markdownIt-TOC">
+<li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+<li><a href="#%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95">强调语法</a>
+<ul>
+<li><a href="#%E6%96%9C%E4%BD%93"><em>斜体</em></a></li>
+<li><a href="#%E7%B2%97%E4%BD%93"><strong>粗体</strong></a></li>
+<li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BB%A3%E7%A0%81code">代码Code</a>
+<ul>
+<li><a href="#%E5%8D%95%E8%A1%8C%E4%BB%A3%E7%A0%81">单行代码</a></li>
+<li><a href="#%E5%A4%9A%E8%A1%8C%E4%BB%A3%E7%A0%81">多行代码</a>
+<ul>
+<li><a href="#%E6%96%B9%E5%BC%8F%E4%B8%80">方式一</a></li>
+<li><a href="#%E6%96%B9%E5%BC%8F%E4%BA%8C">方式二</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%88%97%E8%A1%A8">列表</a>
+<ul>
+<li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
+<li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
+</ul>
+</li>
+<li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#to-do%E5%88%97%E8%A1%A8">To-Do列表</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E5%BC%95%E7%94%A8">文本引用</a></li>
+<li><a href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87">插入图片</a></li>
+</ul>
+</p>
+<hr>
+<h1 id="标题">标题</h1>
+<p>在Markdown中定义标题在前加<code>#</code>号即可。<br>
+以此类推，总共六级标题。<br>
+在<code>#</code>号后建议加一个<code>空格</code>，这是标准的Markdown语法。<br>
+<code># 标题H1</code><br>
+<code>## 标题H3</code><br>
+<code>#### 标题H4</code><br>
+<code>##### 标题H5</code><br>
+<code>###### 标题H6</code></p>
+<hr>
+<h1 id="强调语法">强调语法</h1>
+<h2 id="斜体"><em>斜体</em></h2>
+<p>斜体的语法是用<code>*</code>或<code>_</code>包裹<br>
+快捷键为<code>Command+I</code><br>
+<code>*这是斜体*</code><br>
+<code>_这也是斜体_</code><br>
+示例：<br>
+<em>这也是斜体</em><br>
+<em>这是斜体</em></p>
+<h2 id="粗体"><strong>粗体</strong></h2>
+<p>粗体的语法是用<code>**</code>包裹<br>
+快捷键为<code>Command+B</code><br>
+<code>**这是粗体**</code><br>
+示例：<br>
+<strong>这是粗体</strong></p>
+<h2 id="删除线">删除线</h2>
+<p>删除线的语法是用<code>~~</code>包裹<br>
+<code>~~这是删除线~~</code><br>
+示例：<br>
+<s>这是删除线</s></p>
+<hr>
+<h1 id="代码code">代码Code</h1>
+<h2 id="单行代码">单行代码</h2>
+<p>行内代码的语法是用<code>反引号（Esc键）</code>包裹。<br>
+当然单行代码也可用来标记<code>文件名</code>、<code>关键字</code>等。<br>
+示例：<br>
+<code>这是单行代码</code></p>
+<h2 id="多行代码">多行代码</h2>
+<h3 id="方式一">方式一</h3>
+<p>用<code>三个反引号（Esc键）</code>包裹。<br>
+示例：</p>
+<pre><code>for i in range(10, 51):
+    if 1 &lt;= i % 10 &lt;= 5:
+    print(i)
+</code></pre>
+<h3 id="方式二">方式二</h3>
+<p>缩进 4 个空格或是 1 个制表符；<br>
+<code>注意此种方式代码块上方要留一空行</code><br>
+示例：</p>
+<pre><code>for i in range(10, 51):
+    if 1 &lt;= i % 10 &lt;= 5:
+    print(i)
+</code></pre>
+<hr>
+<h1 id="列表">列表</h1>
+<h2 id="无序列表">无序列表</h2>
+<p>无序列表以<code>+``-``*</code>任意开头即可<br>
+类似于标题，注意要<code>+``-``*</code>后面要加一个<code>空格</code><br>
+示例：<br>
+<code>+ 列表一</code><br>
+<code>- 列表二</code><br>
+<code>* 列表三</code><br>
+显示效果：</p>
+<ul>
+<li>列表一</li>
+</ul>
+<ul>
+<li>列表二</li>
+</ul>
+<ul>
+<li>列表三</li>
+</ul>
+<p>并且可任意嵌套。</p>
+<pre><code>+ 一级嵌套
+- 一级嵌套
+* 一级嵌套
+    - 二级嵌套
+    * 二级嵌套
+    + 二级嵌套
+        + 三级嵌套
+        + 三级嵌套
+        + 三级嵌套
+            - 四级嵌套
+            + 四级嵌套
+            * 四级嵌套
+</code></pre>
+<p>示例：</p>
+<ul>
+<li>一级嵌套</li>
+</ul>
+<ul>
+<li>一级嵌套</li>
+</ul>
+<ul>
+<li>一级嵌套
+<ul>
+<li>二级嵌套</li>
+</ul>
+<ul>
+<li>二级嵌套</li>
+</ul>
+<ul>
+<li>二级嵌套
+<ul>
+<li>三级嵌套</li>
+<li>三级嵌套</li>
+<li>三级嵌套</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="有序列表">有序列表</h2>
+<p>有序列表直接以阿拉伯数学排序即可。<br>
+注意在<code>有序列表符号</code>后面建议也加一个<code>空格</code><br>
+示例：</p>
+<ol>
+<li>列表一</li>
+<li>列表二</li>
+<li>列表三</li>
+</ol>
+<hr>
+<h1 id="分割线">分割线</h1>
+<p>连续三个星号<code>***</code>或者连续三个横杠<code>---</code>即可。<br>
+推荐使用连续的三个星号。</p>
+<hr>
+<h1 id="表格">表格</h1>
+<p>在Markdown中制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头和其他行<br>
+语法格式如下：</p>
+<pre><code>| 表头 | 表头 |
+| --- | --- |
+| 单元格 | 单元格 |
+</code></pre>
+<p>示例显示效果为：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<p>我们也可以设置表格的对齐方式：</p>
+<ul>
+<li>:<code>---</code>设置内容和标题左对齐</li>
+<li><code>:---:</code>设置内容和标题居中对齐</li>
+<li><code>---:</code>设置内容和标题右对齐</li>
+</ul>
+<pre><code>    | 左对齐 | 居中对齐 | 右对齐 |
+    | :--- | :---: | ---: |
+    | 单元格 | 单元格 | 单元格 |
+    | 单元格 | 单元格 | 单元格 |
+</code></pre>
+<p>示例显示效果为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:center">单元格</td>
+<td style="text-align:right">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:center">单元格</td>
+<td style="text-align:right">单元格</td>
+</tr>
+</tbody>
+</table>
+<h1 id="to-do列表">To-Do列表</h1>
+<p><code>- [ ] Text</code>表示未完成<br>
+<code>- [x] Text</code>表示已完成<br>
+示例：</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8124691"><label class="task-list-item-label" for="task-item-8124691"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-3244655"><label class="task-list-item-label" for="task-item-3244655"> 已完成</label></li>
+</ul>
+<h1 id="文本引用">文本引用</h1>
+<p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>
+示例：</p>
+<blockquote>
+<p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。</p>
+</blockquote>
+<h1 id="插入图片">插入图片</h1>
+<p>持续更新中......</p>
+
+							</div>
+							<div class="wow zoomIn vt-post-tags">
+								
+								<a href="https://kuangyang828.github.io/tag/XJ4rPE-xC/" rel="tag">Markdown</a>
+								
+							</div>
+							<nav class="navigation3 post-navigation3" role="navigation">
+
+								<div class="nav-links3">
+									
+									<div class="wow zoomIn nav-previous3"><a href="https://kuangyang828.github.io/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/"
+											rel="prev"> 使用jsDelivr的CDN配合PicGo搭建一个GitHub图床</a></div>
+									
+									
+								</div>
+							</nav>
+							<div class="wow zoomIn author-info" style="visibility: visible; animation-name: zoomIn;">
+								<div class="author-avatar pull-left"><img
+										src="https://kuangyang828.github.io/images/avatar.png"></div>
+								
+								<div class="author-description">
+									<div class="author-title">
+										<div class="author-link" rel="author">况杨</div>
+									</div>
+									
+									
+									<p class="author-bio">做自己喜欢的事。</p>
+								</div>
+							</div>
+							
+						</div>
+					</article>
+					<div id="marlin_lite_about_widget-2" class="wow zoomIn widget marlin_lite_about_widget"
+						data-wow-delay="0.1s">
+
+						
+						<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://kuangyang828.github.io/media/scripts/Valine.min.js'></script>
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+
+
+<div class="comment"></div>
+<script>
+        new Valine({
+            // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+            av: AV, 
+            el: '.comment',
+            lang: 'zh-cn',
+            visitor: true,
+            
+            admin_email:'kuangyang828@gmail.com',
+            
+            
+            emoticon_list: ["吐.png","喷血.png","狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","中指.png","尴尬.png","瞅你.png","想一想.png","中枪.png","得意.png","肿包.png","扇耳光.png","亲亲.png","惊喜.png","脸红.png","无所谓.png","便便.png","愤怒.png","蜡烛.png","献黄瓜.png","内伤.png","投降.png","观察.png","看不见.png","击掌.png","抠鼻.png","邪恶.png","看热闹.png","口水.png","抽烟.png","锁眉.png","装大款.png","吐舌.png","无奈.png","长草.png","赞一个.png","呲牙.png","无语.png","阴暗.png","不出所料.png","咽气.png","期待.png","高兴.png","吐血倒地.png","哭泣.png","欢呼.png","黑线.png","喜极而泣.png","喷水.png","深思.png","鼓掌.png","暗地观察.png"],
+            
+                app_id: 'EaU0L5ruswGO5sU4g0UYiSKd-MdYXbMMI',
+                 	
+            
+                app_key: 'IfqhspTpT4DWcURdn0Lfnp7q',
+            	
+            
+        });
+    </script> 
+
+
+					</div>
+				</div>
+				<div class="tocc col l3 hide-on-med-and-down">
+
+    <div class="toc-widget">
+
+        <div class="toc-title"></div>
+
+        <div id="toc-content">
+
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.5.0/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '.entry-summary',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('.entry-summary').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+    });
+
+    $(function () {
+        var bt;
+        bt = $('.toc-widget');
+        if ($(document).width() > 480) {
+            $(window).scroll(function () {
+                var st;
+                st = $(window).scrollTop();
+                if (st > 450) {
+                    return bt.css('display', 'block');
+                } else {
+                    return bt.css('display', 'none');
+                }
+            })
+        }
+    });
+</script>
+			</div>
+		</div>
+		<footer id="colophon" class="site-footer">
+	<div class="container">
+		<div class="copyright">
+			<span class="runtime">
+				「我」已经运行了<script type="text/javascript">
+					var urodz = new Date("01/09/2021");
+					var now = new Date();
+					var ile = now.getTime() - urodz.getTime();
+					var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+					document.write(+dni)
+				</script>天
+				<br>
+			</span>
+			Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+			<b>Crafted with by <a href="https://chiperman.github.io/about/" target="_blank">chiperman</a></b>
+			<br>
+			<b>Eleven forever.</b>
+			<br>
+			<b>Theme: </b>
+			<a href="https://github.com/chiperman/gridea-theme-xiaox" target="_blank" title="Pan">
+				<span><b>Pan - XiaoX</b></span>
+			</a>
+			<b>. Powered by </b>
+			<a href="https://gridea.dev/" target="_blank" title="Gridea">
+				<span><b>Gridea</b></span>
+			</a>
+		</div>
+	</div><!-- .container -->
+</footer><!-- #colophon -->
+	</div>
+
+	<script src="https://cdn.bootcss.com/fitvids/1.2.0/jquery.fitvids.min.js"></script>
+
+<script
+  src="https://cdn.jsdelivr.net/gh/kuangyang828/kuangyang828.github.io/media/scripts/marlin-scripts.js">
+</script>
+
+<script src="//tokinx.github.io/lately/lately.min.js"></script>
+<script>
+  jQuery(document).ready(function () {
+    $.lately({
+      'target': '.lately-a,.lately-b,.lately-c'
+    })
+  });
+</script>
+<style type="text/css">
+  /* 一键到顶部 */
+  a.back_to_top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 65px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+  }
+
+  a.back_to_top span {
+    color: #888;
+  }
+
+  a.back_to_top:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+
+  a.back_to_top:hover span {
+    color: #555;
+  }
+
+  @media print,
+  screen and (max-width: 580px) {
+    .back_to_top {
+      display: none !important;
+    }
+  }
+
+  /* 一键到底部 */
+
+  a.down_to_bottom {
+    text-decoration: none;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    background: #f0f0f0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    transition-duration: .5s;
+    transition-propety: background-color;
+    display: none;
+  }
+
+  a.down_to_bottom span {
+    color: #888;
+  }
+
+  a.down_to_bottom:hover {
+    cursor: pointer;
+    background: #dfdfdf;
+  }
+
+  a.down_to_bottom:hover span {
+    color: #555;
+  }
+
+  @media print,
+  screen and (max-width: 580px) {
+    .down_to_bottom {
+      display: none !important;
+    }
+  }
+</style>
+
+
+<a id="back_to_top" href="#" class="back_to_top"><span><i class="iconfont icon-xiangshang"></i></span>
+</a>
+
+<a id="down_to_bottom" href="#" class="down_to_bottom"><span><i class="iconfont icon-xiangxia"></i></span>
+</a>
+
+<script src="//instant.page/3.0.0" type="module" defer
+  integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+<script>
+  function getScrollTop() {
+    var scrollTop = 0,
+      bodyScrollTop = 0,
+      documentScrollTop = 0;
+    if (document.body) {
+      bodyScrollTop = document.body.scrollTop;
+    }
+    if (document.documentElement) {
+      documentScrollTop = document.documentElement.scrollTop;
+    }
+    scrollTop = (bodyScrollTop - documentScrollTop > 0) ? bodyScrollTop : documentScrollTop;
+    return scrollTop;
+  };
+
+  function getScrollHeight() {
+    var scrollHeight = 0,
+      bodyScrollHeight = 0,
+      documentScrollHeight = 0;
+    if (document.body) {
+      bSH = document.body.scrollHeight;
+    }
+    if (document.documentElement) {
+      dSH = document.documentElement.scrollHeight;
+    }
+    scrollHeight = (bSH - dSH > 0) ? bSH : dSH;
+    return scrollHeight;
+  };
+
+  function getWindowHeight() {
+    var windowHeight = 0;
+    if (document.compatMode == "CSS1Compat") {
+      windowHeight = document.documentElement.clientHeight;
+    } else {
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight;
+  };
+
+  $(document).ready((function (_this) {
+    return function () {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function () {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block');
+          } else {
+            return bt.css('display', 'none');
+          }
+        });
+        return bt.click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+      }
+    };
+  })(this));
+
+  $(document).ready((function (_this) {
+    return function () {
+      var bt;
+      bt = $('#down_to_bottom');
+      if ($(document).width() > 480) {
+        $(window).scroll(function () {
+          var st;
+          st = $(window).scrollTop();
+          if (getScrollTop() + getWindowHeight() == getScrollHeight()) {
+            return bt.css('display', 'none');
+          } else {
+            return bt.css('display', 'block');
+          }
+        });
+        return bt.click(function () {
+          $('body,html').animate({
+            scrollTop: $('body,html')[0].scrollHeight
+          }, 800);
+          return false;
+        });
+      }
+    };
+  })(this));
+</script>
+	<script data-no-instant>
+		(function ($) {
+			$.extend({
+				adamsOverload: function () {
+					$('.navigation:eq(0)').remove();
+					$("").attr("rel", "external");
+					$("a[rel='external'],a[rel='external nofollow']").attr("target", "_blank");
+					$("a.vi").attr("rel", "");
+					$.viewImage({
+						'target': 'img',
+						'exclude': '.vsmile-icons img,.gallery img',
+						'delay': 300
+					});
+					$.lately({
+						'target': '.commentmetadata a,.infos time,.post-list time'
+					});
+					prettyPrint();
+
+					$('ul.links li a').each(function () {
+						if ($(this).parent().find('.bg').length == 0) {
+							$(this).parent().append(
+								'<!---<div class="bg" style="background-image:url(https://c3.glgoo.top/s2/favicons?domain=' +
+								$(this).attr("href") + ')"></div>--->')
+						}
+					});
+				}
+			});
+		})(jQuery);
+		jQuery.adamsOverload();
+	</script>
+
+</body>
+
+</html>
