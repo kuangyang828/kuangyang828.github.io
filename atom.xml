@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-02-13T05:53:49.059Z</updated>
+    <updated>2021-02-13T06:00:11.399Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -42,7 +42,11 @@
         <updated>2021-01-09T05:26:27.000Z</updated>
         <content type="html"><![CDATA[<p>目录：使用<code>[TOC]</code>就可以生成目录<br>
 <ul class="markdownIt-TOC">
+<li>
+<ul>
 <li><a href="#%E6%A0%87%E9%A2%98">标题</a></li>
+</ul>
+</li>
 <li><a href="#%E5%BC%BA%E8%B0%83%E8%AF%AD%E6%B3%95">强调语法</a>
 <ul>
 <li><a href="#%E6%96%9C%E4%BD%93"><em>斜体</em></a></li>
@@ -68,8 +72,6 @@
 <ul>
 <li><a href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8">无序列表</a></li>
 <li><a href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8">有序列表</a></li>
-</ul>
-</li>
 <li><a href="#%E5%88%86%E5%89%B2%E7%BA%BF">分割线</a></li>
 <li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
 <li><a href="#to-do%E5%88%97%E8%A1%A8">To-Do列表</a></li>
@@ -77,9 +79,11 @@
 <li><a href="#%E8%84%9A%E6%B3%A8">脚注</a></li>
 <li><a href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87">插入图片</a></li>
 </ul>
+</li>
+</ul>
 </p>
 <hr>
-<h1 id="标题">标题</h1>
+<h2 id="标题">标题</h2>
 <p>在Markdown中定义标题在前加<code>#</code>号即可。<br>
 以此类推，总共六级标题。<br>
 在<code>#</code>号后建议加一个<code>空格</code>，这是标准的Markdown语法。<br>
@@ -216,11 +220,11 @@ X<sub>1</sub></p>
 <li>列表三</li>
 </ol>
 <hr>
-<h1 id="分割线">分割线</h1>
+<h2 id="分割线">分割线</h2>
 <p>连续三个星号<code>***</code>或者连续三个横杠<code>---</code>即可。<br>
 推荐使用连续的三个星号。</p>
 <hr>
-<h1 id="表格">表格</h1>
+<h2 id="表格">表格</h2>
 <p>在Markdown中制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>(一个，两个，三个...都可以)来分隔表头和其他行<br>
 语法格式如下：</p>
 <pre><code>| 表头 | 表头 |
@@ -276,29 +280,29 @@ X<sub>1</sub></p>
 </tbody>
 </table>
 <hr>
-<h1 id="to-do列表">To-Do列表</h1>
+<h2 id="to-do列表">To-Do列表</h2>
 <p><code>- [ ] Text</code>表示未完成<br>
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9988485"><label class="task-list-item-label" for="task-item-9988485"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4440079"><label class="task-list-item-label" for="task-item-4440079"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2987293"><label class="task-list-item-label" for="task-item-2987293"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1541646"><label class="task-list-item-label" for="task-item-1541646"> 已完成</label></li>
 </ul>
 <hr>
-<h1 id="文本引用">文本引用</h1>
+<h2 id="文本引用">文本引用</h2>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>
 示例：</p>
 <blockquote>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。</p>
 </blockquote>
 <hr>
-<h1 id="脚注">脚注</h1>
+<h2 id="脚注">脚注</h2>
 <p><code>这里有一个脚注[^1]，还有一个脚注[^2]</code><br>
 脚注注释用<code>[^1]:注释内容</code><br>
 示例:<br>
 这里有一个脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，还有一个脚注<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
 <hr>
-<h1 id="插入图片">插入图片</h1>
+<h2 id="插入图片">插入图片</h2>
 <p><code>![描述](图片链接)</code><br>
 示例：<br>
 <img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/ios-14-2-3840x2160-artwork-day-4k-23208.jpg" alt="" loading="lazy"></p>
