@@ -141,7 +141,7 @@
 				
 				
 			</div>
-			<form id="gridea-search-form" data-update="1612593290908" action="/search/index.html">
+			<form id="gridea-search-form" data-update="1613195626360" action="/search/index.html">
 				<div class="search-box">
 					<input class="search-txt" name="q" placeholder="Type to search" />
 					<a class="search-btn">
@@ -162,7 +162,7 @@
 										2021-01-09
 									</time>
 									<span>
-										3 min read
+										4 min read
 									</span>
 									<!-- id 将作为查询条件 -->
 									<span id="/markdown-yu-yan/" class="leancloud_visitors"  data-flag-title="Markdown语言">
@@ -189,6 +189,9 @@
 <li><a href="#%E6%96%9C%E4%BD%93"><em>斜体</em></a></li>
 <li><a href="#%E7%B2%97%E4%BD%93"><strong>粗体</strong></a></li>
 <li><a href="#%E5%88%A0%E9%99%A4%E7%BA%BF">删除线</a></li>
+<li><a href="#%E6%96%87%E6%9C%AC%E9%AB%98%E4%BA%AE">文本高亮</a></li>
+<li><a href="#%E4%B8%8A%E6%A0%87">上标</a></li>
+<li><a href="#%E4%B8%8B%E6%A0%87">下标</a></li>
 </ul>
 </li>
 <li><a href="#%E4%BB%A3%E7%A0%81code">代码Code</a>
@@ -212,6 +215,7 @@
 <li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
 <li><a href="#to-do%E5%88%97%E8%A1%A8">To-Do列表</a></li>
 <li><a href="#%E6%96%87%E6%9C%AC%E5%BC%95%E7%94%A8">文本引用</a></li>
+<li><a href="#%E8%84%9A%E6%B3%A8">脚注</a></li>
 <li><a href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87">插入图片</a></li>
 </ul>
 </p>
@@ -246,6 +250,21 @@
 <code>~~这是删除线~~</code><br>
 示例：<br>
 <s>这是删除线</s></p>
+<h2 id="文本高亮">文本高亮</h2>
+<p>文本高亮用<code>==</code>包裹<br>
+<code>==高亮文本==</code><br>
+示例：<br>
+<mark>高亮文本</mark></p>
+<h2 id="上标">上标</h2>
+<p>上标用<code>^</code>包裹<br>
+<code>2^10^</code><br>
+示例：<br>
+2<sup>10</sup></p>
+<h2 id="下标">下标</h2>
+<p>下标用<code>~</code>包裹<br>
+<code>X~1~</code><br>
+示例：<br>
+X<sub>1</sub></p>
 <hr>
 <h1 id="代码code">代码Code</h1>
 <h2 id="单行代码">单行代码</h2>
@@ -343,7 +362,7 @@
 推荐使用连续的三个星号。</p>
 <hr>
 <h1 id="表格">表格</h1>
-<p>在Markdown中制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>来分隔表头和其他行<br>
+<p>在Markdown中制作表格使用<code>|</code>来分隔不同的单元格，使用<code>-</code>(一个，两个，三个...都可以)来分隔表头和其他行<br>
 语法格式如下：</p>
 <pre><code>| 表头 | 表头 |
 | --- | --- |
@@ -397,22 +416,42 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <h1 id="to-do列表">To-Do列表</h1>
 <p><code>- [ ] Text</code>表示未完成<br>
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-3352836"><label class="task-list-item-label" for="task-item-3352836"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-634533"><label class="task-list-item-label" for="task-item-634533"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-9988485"><label class="task-list-item-label" for="task-item-9988485"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4440079"><label class="task-list-item-label" for="task-item-4440079"> 已完成</label></li>
 </ul>
+<hr>
 <h1 id="文本引用">文本引用</h1>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。<br>
 示例：</p>
 <blockquote>
 <p>文本引用在对应的段落文本前加一个<code>&gt;</code>符号即可。</p>
 </blockquote>
+<hr>
+<h1 id="脚注">脚注</h1>
+<p><code>这里有一个脚注[^1]，还有一个脚注[^2]</code><br>
+脚注注释用<code>[^1]:注释内容</code><br>
+示例:<br>
+这里有一个脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，还有一个脚注<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<hr>
 <h1 id="插入图片">插入图片</h1>
-<p>持续更新中......</p>
+<p><code>![描述](图片链接)</code><br>
+示例：<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/ios-14-2-3840x2160-artwork-day-4k-23208.jpg" alt="" loading="lazy"></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>注释示例 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>注释示例 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 
 							</div>
 							<div class="wow zoomIn vt-post-tags">
