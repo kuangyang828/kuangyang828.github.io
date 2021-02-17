@@ -141,7 +141,7 @@
 				
 				
 			</div>
-			<form id="gridea-search-form" data-update="1613316184790" action="/search/index.html">
+			<form id="gridea-search-form" data-update="1613584510180" action="/search/index.html">
 				<div class="search-box">
 					<input class="search-txt" name="q" placeholder="Type to search" />
 					<a class="search-btn">
@@ -162,7 +162,7 @@
 										2021-02-06
 									</time>
 									<span>
-										1 min read
+										2 min read
 									</span>
 									<!-- id 将作为查询条件 -->
 									<span id="/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/" class="leancloud_visitors"  data-flag-title="使用jsDelivr的CDN配合PicGo搭建一个GitHub图床">
@@ -185,7 +185,7 @@
 <p>图床千千万，自建一个才放心。</p>
 </blockquote>
 <p>一个图床的核心需求不外乎是安全稳定+长期可靠+访问快速+能白嫖就白嫖。</p>
-<p>那么我选择了使用<code>GitHub</code>作为图床，但是GitHub在国内直连速度不尽人意，所以我搭配使用了<code>jsDelivr</code>的CDN，jsDelivr的CDN加速服务器遍布全球，包括中国。同理也可使用jsDeliver的CDN免费加速GitHub仓库的其他内容，比如本博客😊，但是注意不要拿来捣腾视频图床，否则可能会被jsDeliver拉黑，较详细的jsDeliver介绍与规则放于文末。</p>
+<p>那么我选择了使用<code>GitHub</code>作为图床，但是GitHub在国内直连速度不尽人意，所以我搭配使用了<code>jsDelivr</code>的CDN，jsDelivr的CDN加速服务器遍布全球，包括中国。同理也可使用jsDeliver的CDN免费加速GitHub仓库的其他内容，比如本博客😊，但是注意不要拿来捣腾视频图床，否则可能会被jsDeliver拉黑，</p>
 <p>同时使用开源工具<a href="https://github.com/Molunerfinn/PicGo">PicGo</a>作为图床的综合管理工具。</p>
 <h2 id="首先在github创建一个图床仓库">首先在GitHub创建一个图床仓库</h2>
 <p>1.在自己的<a href="https://github.com/">GitHub</a>创建一个新的<code>repository</code><br>
@@ -194,6 +194,18 @@
 4.接着点击<code>Create repository</code>即可<br>
 <img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1.39.02.png" alt="" loading="lazy"><br>
 <img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1.47.09.png" alt="" loading="lazy"></p>
+<h2 id="接着在github创建一个具有所有repo权限的token已有请忽略">接着在GitHub创建一个具有所有repo权限的token（已有请忽略）</h2>
+<p>请前往<a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a>创建token</p>
+<h2 id="开始使用picgo使用管理图床">开始使用Picgo使用管理图床</h2>
+<p>首先我们需要进入<code>图床设置</code>进行基础配置<br>
+注意<code>仓库名</code>填写<code>用户名/仓库名</code><br>
+为了jsDeliver加速，<code>自定义域名</code>内填入<code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1.23.04.png" alt="" loading="lazy"></p>
+<p>配置完成后我们就可以进入<code>上传区</code>开始上传图片，上传图片时除了将图片拖拽到<code>程序窗口虚线区域</code>开始上传，也可以直接将图片拖拽到<code>状态栏程序小图标</code>直至显示加号后松手也可完成图片上传。</p>
+<p>图片上传完成后PicGo会<code>自动</code>根据窗口底部<code>链接格式</code>将图片对应的链接格式复制到粘贴板。</p>
+<p>点击<code>上传区</code>下方的<code>相册</code>即可管理相册。<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1.20.41.png" alt="" loading="lazy"></p>
+<p>到这里，我们就可以使用GitHub作为图床用了，同时使用了jsDeliver的CDN加速。</p>
 
 							</div>
 							<div class="wow zoomIn vt-post-tags">
