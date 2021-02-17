@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-02-17T18:15:02.650Z</updated>
+    <updated>2021-02-17T18:18:27.099Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -50,7 +50,7 @@
 <p>图片上传完成后PicGo会<code>自动</code>根据窗口底部<code>链接格式</code>将图片对应的链接格式复制到粘贴板。</p>
 <p>点击<code>上传区</code>下方的<code>相册</code>即可管理相册。<br>
 <img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1.20.41.png" alt="" loading="lazy"></p>
-<p>到这里，我们就可以使用GitHub作为图床用了，同时使用了jsDeliver的CDN加速。</p>
+<p>到这里，我们就可以使用GitHub图床了，同时使用了jsDeliver的CDN加速。</p>
 ]]></content>
     </entry>
     <entry>
@@ -310,8 +310,8 @@ X<sub>1</sub></p>
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7096653"><label class="task-list-item-label" for="task-item-7096653"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4288269"><label class="task-list-item-label" for="task-item-4288269"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4271173"><label class="task-list-item-label" for="task-item-4271173"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6434031"><label class="task-list-item-label" for="task-item-6434031"> 已完成</label></li>
 </ul>
 <hr>
 <h2 id="文本引用">文本引用</h2>
