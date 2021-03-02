@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-02-18T06:30:29.829Z</updated>
+    <updated>2021-03-02T09:54:50.725Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -11,13 +11,77 @@
     <icon>https://kuangyang828.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, kuangyang&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[对二进制的新理解]]></title>
-        <id>https://kuangyang828.github.io/dui-er-jin-zhi-de-xin-li-jie/</id>
-        <link href="https://kuangyang828.github.io/dui-er-jin-zhi-de-xin-li-jie/">
+        <title type="html"><![CDATA[在Mac中安装Maven并配置好Eclipse]]></title>
+        <id>https://kuangyang828.github.io/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse/</id>
+        <link href="https://kuangyang828.github.io/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse/">
         </link>
-        <updated>2021-02-06T04:55:41.000Z</updated>
-        <content type="html"><![CDATA[<p>二进制</p>
-<p>留坑。</p>
+        <updated>2021-03-02T02:24:22.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="下载maven">下载Maven</h2>
+<p>Maven官方下载链接:<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a><br>
+Mac需要下载<code>apache-maven-X.X.X-bin.tar.gz</code><br>
+目前我这里下载的最新版是<code>3.6.3</code>,接下来的演示都以<code>3.6.3</code>为例</p>
+<h2 id="安装maven">安装Maven</h2>
+<h3 id="1解压maven包">1.解压Maven包</h3>
+<p>将下载好的包解压到某一目录,<mark>记住该目录路径</mark><br>
+我这里放在了/Users/kuangyang/Maven/apache-maven-3.6.3</p>
+<h3 id="2配置maven-classpath">2.配置Maven classpath</h3>
+<p>打开<code>终端</code>,输入如下命令:</p>
+<pre><code> vi ~/.bash_profile 
+</code></pre>
+<p>添加如下的 Maven 配置：</p>
+<pre><code># Maven
+export M2_HOME=/Users/kuangyang/Maven/apache-maven-3.6.3
+export PATH=$PATH:$M2_HOME/bin
+</code></pre>
+<p>然后保存并退出vi编辑器:</p>
+<ul>
+<li>按<code>Esc</code>键</li>
+<li>键入类型<code>:wq</code></li>
+<li>按<code>Enter</code>键</li>
+</ul>
+<p>执行如下命令使配置的环境变量生效：</p>
+<pre><code>source ~/.bash_profile 
+</code></pre>
+<h2 id="测试maven是否安装成功">测试Maven是否安装成功</h2>
+<p>执行下面命令执行测试:</p>
+<pre><code>mvn -version
+</code></pre>
+<p>若弹出'无法验证开发者'报错<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.20.56.png" alt="" loading="lazy"><br>
+解决方法1: 开启<code>任何来源</code></p>
+<ul>
+<li>在终端中执行<code>sudo spctl --master-disable</code></li>
+<li>输入密码，再按回车键即可.</li>
+</ul>
+<p>解决方法2: 前往 <code>系统偏好设置</code> -&gt; <code>安全与隐私</code> -&gt; <code>通用</code>选项卡<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.33.08.png" alt="" loading="lazy"></p>
+<p>点击<code>仍然允许</code>, 返回终端再次执行<code>mvn -version</code>然后选择<code>打开</code>即可.</p>
+<p>安装成功时,输出日记如下:</p>
+<pre><code>Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /Users/kuangyang/Maven/apache-maven-3.6.3
+Java version: 15.0.2, vendor: Oracle Corporation, runtime: /Library/Java/             JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home
+Default locale: zh_CN_#Hans, platform encoding: UTF-8
+OS name: &quot;mac os x&quot;, version: &quot;10.16&quot;, arch: &quot;x86_64&quot;, family: &quot;mac&quot;
+</code></pre>
+<h2 id="关于在eclipse中配置maven环境">关于在Eclipse中配置Maven环境</h2>
+<h3 id="为eclipse新建一个本地repository">为Eclipse新建一个本地Repository</h3>
+<ul>
+<li>新建一个文件夹作为New Repository</li>
+<li>前往 <code>Maven解压目录</code> -&gt; <code>conf</code> -&gt; <code>settings.xml</code><br>
+在settings.xml文件的<code>&lt;settings&gt;</code>后面加入<pre><code>&lt;localRepository&gt;/刚刚创建文件夹的路径&lt;/localRepository&gt;
+</code></pre>
+</li>
+</ul>
+<h3 id="eclipse配置maven">Eclipse配置Maven</h3>
+<ul>
+<li>打开<code>Eclipse</code>-&gt;<code>Preference</code> -&gt; <code>maven</code> -&gt; <code>installation</code> -&gt;<code>Add</code>-&gt;<code>Directory</code>-&gt;<code>选择Maven的解压目录</code>-&gt;<code>Finish</code></li>
+<li><code>勾选Maven3.6.3</code>，然后点击<code>apply</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/4.50.37.png" alt="" loading="lazy"></li>
+<li>进入<code>User Settings</code>-&gt;<code>Browse</code>-&gt;<code>conf</code> -&gt; <code>选中settings.xml</code>-&gt; <code>Open</code>-&gt; <code>Update Settings</code> -&gt; <code>Apply and Close</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/5.02.40.png" alt="" loading="lazy"></li>
+</ul>
+<p>到这里, 就完成了安装Maven&amp;配置Eclipse<br>
+赶紧New一个Maven项目试试吧</p>
 ]]></content>
     </entry>
     <entry>
@@ -310,8 +374,8 @@ X<sub>1</sub></p>
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-7788063"><label class="task-list-item-label" for="task-item-7788063"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-6137726"><label class="task-list-item-label" for="task-item-6137726"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6692883"><label class="task-list-item-label" for="task-item-6692883"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-2294779"><label class="task-list-item-label" for="task-item-2294779"> 已完成</label></li>
 </ul>
 <hr>
 <h2 id="文本引用">文本引用</h2>
