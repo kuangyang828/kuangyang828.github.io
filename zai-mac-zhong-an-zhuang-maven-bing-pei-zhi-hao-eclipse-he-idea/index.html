@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>对二进制的新理解 | kuangyang&#39;s Blog</title>
+<title>在Mac中安装Maven并配置好Eclipse和IDEA | kuangyang&#39;s Blog</title>
 
 <link rel="stylesheet" href="https://kuangyang828.github.io/styles/main.css">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Noto+Sans+SC:300|Montserrat&display=swap"
@@ -59,7 +59,7 @@
 			<div class="site-branding">
 				<h1 class="site-title">
 					<div class="post-title-name">
-						<a href="https://kuangyang828.github.io" rel="home">对二进制的新理解</a>
+						<a href="https://kuangyang828.github.io" rel="home">在Mac中安装Maven并配置好Eclipse和IDEA</a>
 					</div>
 				</h1>
 				<h2 class="site-description">记录我的学习点滴。</h2>
@@ -157,13 +157,13 @@
 							<div class="entry-meta">
 								<div class="entry-info">
 									<time>
-										2021-02-06
+										2021-03-02
 									</time>
 									<span>
-										1 min read
+										4 min read
 									</span>
 									<!-- id 将作为查询条件 -->
-									<span id="/dui-er-jin-zhi-de-xin-li-jie/" class="leancloud_visitors"  data-flag-title="对二进制的新理解">
+									<span id="/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse-he-idea/" class="leancloud_visitors"  data-flag-title="在Mac中安装Maven并配置好Eclipse和IDEA">
 										<span class="leancloud-visitors-count"></span>次阅读
 									</span>
 									<span class="isTop">
@@ -179,19 +179,107 @@
 								</div>
 							</div>
 							<div class="wow zoomIn entry-summary song">
-								<p>二进制</p>
-<p>留坑。</p>
+								<h2 id="下载maven">下载Maven</h2>
+<p>Maven官方下载链接:<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a><br>
+Mac需要下载<code>apache-maven-X.X.X-bin.tar.gz</code><br>
+目前我这里下载的最新版是<code>3.6.3</code>,接下来的演示都以<code>3.6.3</code>为例</p>
+<h2 id="安装maven">安装Maven</h2>
+<h3 id="1解压maven包">1.解压Maven包</h3>
+<p>将下载好的包解压到某一目录,<mark>记住该目录路径</mark><br>
+我这里放在了/Users/kuangyang/Maven/apache-maven-3.6.3</p>
+<h3 id="2配置maven-classpath">2.配置Maven classpath</h3>
+<p>打开<code>终端</code>,输入如下命令:</p>
+<pre><code> vi ~/.bash_profile 
+</code></pre>
+<p>添加如下的 Maven 配置：</p>
+<pre><code># Maven
+export M2_HOME=/Users/kuangyang/Maven/apache-maven-3.6.3
+export PATH=$PATH:$M2_HOME/bin
+</code></pre>
+<p>然后保存并退出vi编辑器:</p>
+<ul>
+<li>按<code>Esc</code>键</li>
+<li>键入类型<code>:wq</code></li>
+<li>按<code>Enter</code>键</li>
+</ul>
+<p>执行如下命令使配置的环境变量生效：</p>
+<pre><code>source ~/.bash_profile 
+</code></pre>
+<h2 id="测试maven是否安装成功">测试Maven是否安装成功</h2>
+<p>执行下面命令执行测试:</p>
+<pre><code>mvn -version
+</code></pre>
+<p>若弹出'无法验证开发者'报错<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.20.56.png" alt="" loading="lazy"><br>
+解决方法1: 开启<code>任何来源</code></p>
+<ul>
+<li>在终端中执行<code>sudo spctl --master-disable</code></li>
+<li>输入密码，再按回车键即可.</li>
+</ul>
+<p>解决方法2: 前往 <code>系统偏好设置</code> -&gt; <code>安全与隐私</code> -&gt; <code>通用</code>选项卡<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.33.08.png" alt="" loading="lazy"></p>
+<p>点击<code>仍然允许</code>, 返回终端再次执行<code>mvn -version</code>然后选择<code>打开</code>即可.</p>
+<p>安装成功时,输出日记如下:</p>
+<pre><code>Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: /Users/kuangyang/Maven/apache-maven-3.6.3
+Java version: 15.0.2, vendor: Oracle Corporation, runtime: /Library/Java/             JavaVirtualMachines/jdk-15.0.2.jdk/Contents/Home
+Default locale: zh_CN_#Hans, platform encoding: UTF-8
+OS name: &quot;mac os x&quot;, version: &quot;10.16&quot;, arch: &quot;x86_64&quot;, family: &quot;mac&quot;
+</code></pre>
+<h2 id="为maven新建一个本地repository">为Maven新建一个本地Repository</h2>
+<p>为了方便项目的管理,我们自己建一个本地Repository</p>
+<ul>
+<li>新建一个文件夹作为New Repository</li>
+<li>前往 <code>Maven解压目录</code> -&gt; <code>conf</code> -&gt; <code>settings.xml</code><br>
+在settings.xml文件的<code>&lt;settings&gt;</code>后面加入<pre><code>&lt;localRepository&gt;/刚刚创建文件夹的路径&lt;/localRepository&gt;
+</code></pre>
+</li>
+</ul>
+<h2 id="eclipse配置maven环境">Eclipse配置Maven环境</h2>
+<ul>
+<li>打开<code>Eclipse</code>-&gt;<code>Preferences</code> -&gt; <code>maven</code> -&gt; <code>installation</code> -&gt;<code>Add</code>-&gt;<code>Directory</code>-&gt;<code>选择Maven的解压目录</code>-&gt;<code>Finish</code></li>
+<li><code>勾选Maven3.6.3</code>，然后点击<code>apply</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/4.50.37.png" alt="" loading="lazy"></li>
+<li>进入<code>User Settings</code>-&gt;<code>Browse</code>-&gt;<code>conf</code> -&gt; <code>选中settings.xml</code>-&gt; <code>Open</code>-&gt; <code>Update Settings</code> -&gt; <code>Apply and Close</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/5.02.40.png" alt="" loading="lazy"></li>
+</ul>
+<h2 id="在idea中配置maven环境">在IDEA中配置Maven环境</h2>
+<p>打开<code>IDEA</code>-&gt;<code>Preferences</code> -&gt; <code>构建、执行、部署</code> -&gt; <code>构建工具</code> -&gt;<code>Maven</code></p>
+<ul>
+<li><code>Maven主路径</code>选择为 <code>Maven解压目录</code></li>
+<li><code>用户设置文件</code>选择为 <code>Maven解压目录</code> -&gt; <code>conf</code> -&gt; <code>settings.xml</code> (注意要将<code>覆盖</code>选中才能更改路径)<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1031.png" alt="" loading="lazy"></li>
+</ul>
+<p>接下来打开<code>Maven</code>下的<code>运行程序</code></p>
+<ul>
+<li>将<code>JRE</code>改为自己安装的JDK版本<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/10.png" alt="" loading="lazy"></li>
+</ul>
+<p>到这里,就完成了IDEA的配置,接下来尝试在IDEA中新建一个Maven项目</p>
+<h2 id="在idea中新建maven项目">在IDEA中新建Maven项目</h2>
+<p><code>IDEA</code>-&gt;<code>新建项目</code> -&gt; 选择<code>Maven</code> -&gt; 选中<code>从原型创建</code> -&gt;<code>maven-archetype-webapp</code>-&gt;<code>下一步</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.26.17.png" alt="" loading="lazy"><br>
+接下来在此面板中，是一些信息的填写。其中值得关注的设置点是<code>名称</code>以及<code>GroupId</code>.<br>
+GroupId就像是应用程序的身份证.<br>
+填写完成后点击<code>下一步</code>-&gt; <code>完成</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.38.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.44.4.png" alt="" loading="lazy"><br>
+项目创建完成后运行目录 <code>src</code>-&gt;<code>main</code> -&gt; <code>webapp</code> 下的 <code>index.jsp</code>即可看到熟悉的<code>Hello World!</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/12.06.42.png" alt="" loading="lazy"></p>
 
 							</div>
 							<div class="wow zoomIn vt-post-tags">
 								
-								<a href="https://kuangyang828.github.io/tag/wz4HIoj_t/" rel="tag">计算机科学</a>
+								<a href="https://kuangyang828.github.io/tag/CCqNCpA21/" rel="tag">Java</a>
 								
 							</div>
 							<nav class="navigation3 post-navigation3" role="navigation">
 
 								<div class="nav-links3">
 									
+									
+									<div class="wow zoomIn nav-next3"><a href="https://kuangyang828.github.io/shi-yong-jsdelivr-de-cdn-pei-he-picgo-da-jian-yi-ge-github-tu-chuang/"
+											rel="next"> 使用jsDelivr的CDN配合PicGo搭建一个GitHub图床</a></div>
 									
 								</div>
 							</nav>

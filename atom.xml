@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kuangyang828.github.io</id>
     <title>kuangyang&apos;s Blog</title>
-    <updated>2021-03-02T09:57:20.555Z</updated>
+    <updated>2021-03-03T16:28:44.914Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kuangyang828.github.io"/>
     <link rel="self" href="https://kuangyang828.github.io/atom.xml"/>
@@ -11,9 +11,9 @@
     <icon>https://kuangyang828.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, kuangyang&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[在Mac中安装Maven并配置好Eclipse]]></title>
-        <id>https://kuangyang828.github.io/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse/</id>
-        <link href="https://kuangyang828.github.io/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse/">
+        <title type="html"><![CDATA[在Mac中安装Maven并配置好Eclipse和IDEA]]></title>
+        <id>https://kuangyang828.github.io/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse-he-idea/</id>
+        <link href="https://kuangyang828.github.io/zai-mac-zhong-an-zhuang-maven-bing-pei-zhi-hao-eclipse-he-idea/">
         </link>
         <updated>2021-03-02T02:24:22.000Z</updated>
         <content type="html"><![CDATA[<h2 id="下载maven">下载Maven</h2>
@@ -63,8 +63,8 @@ Java version: 15.0.2, vendor: Oracle Corporation, runtime: /Library/Java/       
 Default locale: zh_CN_#Hans, platform encoding: UTF-8
 OS name: &quot;mac os x&quot;, version: &quot;10.16&quot;, arch: &quot;x86_64&quot;, family: &quot;mac&quot;
 </code></pre>
-<h2 id="关于在eclipse中配置maven环境">关于在Eclipse中配置Maven环境</h2>
-<h3 id="为eclipse新建一个本地repository">为Eclipse新建一个本地Repository</h3>
+<h2 id="为maven新建一个本地repository">为Maven新建一个本地Repository</h2>
+<p>为了方便项目的管理,我们自己建一个本地Repository</p>
 <ul>
 <li>新建一个文件夹作为New Repository</li>
 <li>前往 <code>Maven解压目录</code> -&gt; <code>conf</code> -&gt; <code>settings.xml</code><br>
@@ -72,16 +72,37 @@ OS name: &quot;mac os x&quot;, version: &quot;10.16&quot;, arch: &quot;x86_64&qu
 </code></pre>
 </li>
 </ul>
-<h3 id="eclipse配置maven">Eclipse配置Maven</h3>
+<h2 id="eclipse配置maven环境">Eclipse配置Maven环境</h2>
 <ul>
-<li>打开<code>Eclipse</code>-&gt;<code>Preference</code> -&gt; <code>maven</code> -&gt; <code>installation</code> -&gt;<code>Add</code>-&gt;<code>Directory</code>-&gt;<code>选择Maven的解压目录</code>-&gt;<code>Finish</code></li>
+<li>打开<code>Eclipse</code>-&gt;<code>Preferences</code> -&gt; <code>maven</code> -&gt; <code>installation</code> -&gt;<code>Add</code>-&gt;<code>Directory</code>-&gt;<code>选择Maven的解压目录</code>-&gt;<code>Finish</code></li>
 <li><code>勾选Maven3.6.3</code>，然后点击<code>apply</code><br>
 <img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/4.50.37.png" alt="" loading="lazy"></li>
 <li>进入<code>User Settings</code>-&gt;<code>Browse</code>-&gt;<code>conf</code> -&gt; <code>选中settings.xml</code>-&gt; <code>Open</code>-&gt; <code>Update Settings</code> -&gt; <code>Apply and Close</code><br>
 <img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/5.02.40.png" alt="" loading="lazy"></li>
 </ul>
-<p>到这里, 就完成了安装Maven&amp;配置Eclipse<br>
-赶紧New一个Maven项目试试吧</p>
+<h2 id="在idea中配置maven环境">在IDEA中配置Maven环境</h2>
+<p>打开<code>IDEA</code>-&gt;<code>Preferences</code> -&gt; <code>构建、执行、部署</code> -&gt; <code>构建工具</code> -&gt;<code>Maven</code></p>
+<ul>
+<li><code>Maven主路径</code>选择为 <code>Maven解压目录</code></li>
+<li><code>用户设置文件</code>选择为 <code>Maven解压目录</code> -&gt; <code>conf</code> -&gt; <code>settings.xml</code> (注意要将<code>覆盖</code>选中才能更改路径)<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/1031.png" alt="" loading="lazy"></li>
+</ul>
+<p>接下来打开<code>Maven</code>下的<code>运行程序</code></p>
+<ul>
+<li>将<code>JRE</code>改为自己安装的JDK版本<br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/10.png" alt="" loading="lazy"></li>
+</ul>
+<p>到这里,就完成了IDEA的配置,接下来尝试在IDEA中新建一个Maven项目</p>
+<h2 id="在idea中新建maven项目">在IDEA中新建Maven项目</h2>
+<p><code>IDEA</code>-&gt;<code>新建项目</code> -&gt; 选择<code>Maven</code> -&gt; 选中<code>从原型创建</code> -&gt;<code>maven-archetype-webapp</code>-&gt;<code>下一步</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.26.17.png" alt="" loading="lazy"><br>
+接下来在此面板中，是一些信息的填写。其中值得关注的设置点是<code>名称</code>以及<code>GroupId</code>.<br>
+GroupId就像是应用程序的身份证.<br>
+填写完成后点击<code>下一步</code>-&gt; <code>完成</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.38.png" alt="" loading="lazy"><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/11.44.4.png" alt="" loading="lazy"><br>
+项目创建完成后运行目录 <code>src</code>-&gt;<code>main</code> -&gt; <code>webapp</code> 下的 <code>index.jsp</code>即可看到熟悉的<code>Hello World!</code><br>
+<img src="https://cdn.jsdelivr.net/gh/kuangyang828/jsDeliverCDN/img/12.06.42.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
@@ -374,8 +395,8 @@ X<sub>1</sub></p>
 <code>- [x] Text</code>表示已完成<br>
 示例：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-6448414"><label class="task-list-item-label" for="task-item-6448414"> 未完成</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5925311"><label class="task-list-item-label" for="task-item-5925311"> 已完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5105406"><label class="task-list-item-label" for="task-item-5105406"> 未完成</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5542563"><label class="task-list-item-label" for="task-item-5542563"> 已完成</label></li>
 </ul>
 <hr>
 <h2 id="文本引用">文本引用</h2>
